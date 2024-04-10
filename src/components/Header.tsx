@@ -11,7 +11,7 @@ export default function Header() {
     const [show, setShow] = useState(false)
 
     return (
-        <header className='flex flex-row justify-between items-center relative pb-[23px]'>
+        <header className='flex flex-row justify-between items-center relative pb-[23px] px-6'>
             <Image
                 src={"/logo.svg"}
                 alt='shortly logo'

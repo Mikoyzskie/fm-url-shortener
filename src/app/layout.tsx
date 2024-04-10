@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header"
+import Footer from "@/components/Footer";
 
 const inter = Poppins({ subsets: ["latin"], weight: ["500", "700"] });
 
@@ -17,9 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} px-6 pt-10`}>
+      <body className={`${inter.className} pt-10`}>
         <Header />
-        {children}
+        <div className="px-6">
+          {children}
+        </div>
+        <Footer />
       </body>
     </html>
   );
