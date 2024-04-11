@@ -23,7 +23,7 @@ export default function Header() {
                 <rect y="9" width="24" height="3" fill="#9E9AA8" />
                 <rect y="18" width="24" height="3" fill="#9E9AA8" />
             </svg>
-            <div className={clsx('absolute w-full -bottom-[387px] bg-[#3A3054] text-white rounded-[10px] flex-col items-center gap-[30px] px-6 py-10 text-lg font-bold leading-[27px] z-10',
+            <div className={clsx('absolute -bottom-[387px] bg-[#3A3054] text-white rounded-[10px] flex-col items-center gap-[30px] px-6 py-10 text-lg font-bold leading-[27px] z-10',
                 show ? "flex" : "hidden"
             )}>
                 <Link href={"/"}>Features</Link>
