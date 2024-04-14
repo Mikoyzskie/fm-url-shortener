@@ -3,28 +3,11 @@
 import Image from "next/image"
 import Button from "@/components/Button"
 import Result from "@/components/Result";
+import Form from "@/components/Form";
 
 export default async function Home() {
 
-  const result = async (link: string) => {
-    const response = await fetch("https://cleanuri.com/api/v1/shorten", {
-      method: "POST",
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        url: link
-      })
-    })
 
-    return response.json()
-  }
-
-  function handleSumbit(e: any) {
-    console.log("test");
-
-  }
 
 
   return (
@@ -61,10 +44,7 @@ export default async function Home() {
               height={128}
               className="absolute top-0 right-0 z-0"
             />
-            <form action={() => { handleSumbit }} className="flex flex-col gap-4">
-              <input type="text" name="url" className="py-[6px] outline-[#F46363] border-[#F46363] border-[3px] px-[16px] leading-[36px] tracking-[#0.12px] relative z-10 w-full rounded-[5px]" placeholder="Shorten a link here..." />
-              <button type="submit" className="text-lg text-white leading-[27px] font-bold rounded-[5px] relative z-10 w-full py-[10px] bg-[#2BD0D0]">Shorten It!</button>
-            </form>
+            <Form />
           </div>
         </div>
 
