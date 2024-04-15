@@ -3,6 +3,8 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header"
 import Footer from "@/components/Footer";
+import Image from "next/image"
+import Button from "@/components/Button";
 
 const inter = Poppins({ subsets: ["latin"], weight: ["500", "700"] });
 
@@ -21,6 +23,28 @@ export default function RootLayout({
       <body className={`${inter.className} pt-10`}>
         <Header />
         <div className="">
+          <main className="pb-[168px] px-6">
+            <div className="overflow-hidden pb-[37px]">
+              <Image
+                src={"/illustration-working.svg"}
+                alt="hero image"
+                width={733}
+                height={482}
+                className="relative"
+              />
+            </div>
+            <div className="flex flex-col gap-[15px]">
+              <h1 className="text-[42px] font-bold text-[#34313D] leading-[48px] text-center">
+                More than just shorter links
+              </h1>
+              <p className="text-[#9E9AA8] font-medium text-lg leading-[30px] tracking-[0.12px] text-center mb-5">
+                {"Build your brand’s recognition and get detailed insights on how your links are performing."}
+              </p>
+              <div className="px-[65px] font-bold text-white">
+                <Button text="Get Started" />
+              </div>
+            </div>
+          </main>
           {children}
         </div>
         <Footer />

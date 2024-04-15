@@ -35,9 +35,11 @@ export default function Form() {
 
 
     return (
-        <form action={formAction} className="flex flex-col gap-4">
-            <input type="text" name="url" className="py-[6px] outline-[#F46363] border-[#F46363] border-[3px] px-[16px] leading-[36px] tracking-[#0.12px] relative z-10 w-full rounded-[5px]" placeholder="Shorten a link here..." />
-            <SubmitButton />
-        </form>
+        <>
+            <form action={formAction} className="flex flex-col gap-4">
+                <input type="text" name="url" className="py-[6px] outline-[#F46363] border-[#F46363] border-[3px] px-[16px] leading-[36px] tracking-[#0.12px] relative z-10 w-full rounded-[5px]" placeholder="Shorten a link here..." />
+                <SubmitButton />
+            </form>
+        </>
     )
 }
