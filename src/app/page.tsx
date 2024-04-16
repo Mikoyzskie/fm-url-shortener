@@ -69,7 +69,13 @@ export default function Home() {
 
         <div className="flex flex-col gap-[92px]">
 
-          <Result />
+          {
+            Array.from({ length: test }).map((_, index) => (
+              <div key={index}>
+                <Result />
+              </div>
+            ))
+          }
 
           <Section />
 
