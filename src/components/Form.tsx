@@ -31,7 +31,7 @@ const initialState: IInitial = {
 export default function Form() {
     const [state, formAction] = useFormState(shorten, initialState)
 
-    console.log(state?.url);
+    // console.log(state?.url);
 
 
     return (

@@ -37,7 +37,7 @@ export async function shorten(prevState: any, formData: FormData) {
 
     const data: IResult = await response.json();
 
-    console.log(data);
+    // console.log(data);
 
     return {
       message: "Success",

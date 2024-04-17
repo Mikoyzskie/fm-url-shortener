@@ -33,15 +33,23 @@ const initialState: IInitial = {
 
 export default function Home() {
   const [state, formAction] = useFormState(shorten, initialState)
-  const [test, setTest] = useState(0)
+  const [test, setTest] = useState<string[]>()
 
   useEffect(() => {
     if (state.url) {
-      setTest(test + 1)
+
+      if (test) {
+        setTest([...test, state.url])
+      } else {
+        setTest([state.url])
+      }
+
     }
-    console.log(test);
+
 
   }, [state])
+
+  console.log(test);
 
 
 
@@ -69,12 +77,21 @@ export default function Home() {
 
         <div className="flex flex-col gap-[92px]">
 
-          {
+          {/* {
             Array.from({ length: test }).map((_, index) => (
               <div key={index}>
                 <Result />
               </div>
             ))
+          } */}
+          {
+            test?.map((item, index: number) => {
+              return (
+                <div key={index}>
+                  <Result item={item} />
+                </div>
+              )
+            })
           }
 
           <Section />
