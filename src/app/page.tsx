@@ -56,7 +56,9 @@ export default function Home() {
   return (
     <>
 
-      <section className="relative bg-[#EFF1F7] px-6 pt-[160px] pb-[80px]">
+      <section className={clsx("relative bg-[#EFF1F7] px-6 pb-[80px]",
+        state.url ? "pt-[126px]" : "pt-[160px]"
+      )}>
         <div className="absolute -top-[77px] inset-x-0 mx-6 flex flex-col gap-6">
           <div className="rounded-[10px] w-full bg-[#3A3054] relative p-6 overflow-hidden z-10  px-6">
             <Image
@@ -75,15 +77,9 @@ export default function Home() {
 
 
 
-        <div className="flex flex-col gap-[92px]">
-
-          {/* {
-            Array.from({ length: test }).map((_, index) => (
-              <div key={index}>
-                <Result />
-              </div>
-            ))
-          } */}
+        <div className={clsx(" flex-col gap-6",
+          test ? "flex pb-[80px]" : "hidden"
+        )}>
           {
             test?.map((item, index: number) => {
               return (
@@ -93,9 +89,10 @@ export default function Home() {
               )
             })
           }
+        </div>
 
+        <div className="flex flex-col gap-[92px]">
           <Section />
-
         </div>
       </section>
     </>
