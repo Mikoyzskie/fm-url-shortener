@@ -34,6 +34,7 @@ const initialState: IInitial = {
 export default function Home() {
   const [state, formAction] = useFormState(shorten, initialState)
   const [test, setTest] = useState<string[]>()
+  const [isInvalid, setIsInvalid] = useState(false)
 
   useEffect(() => {
     if (state.url) {
@@ -43,14 +44,13 @@ export default function Home() {
       } else {
         setTest([state.url])
       }
-
     }
 
+    if (state.message === "Invalid URL") {
+      setIsInvalid(true)
+    }
 
   }, [state])
-
-  console.log(test);
-
 
 
   return (
@@ -69,7 +69,9 @@ export default function Home() {
               className="absolute top-0 right-0 z-0"
             />
             <form action={formAction} className="flex flex-col gap-4">
-              <input type="text" name="url" className="py-[6px] outline-[#F46363] border-[#F46363] border-[3px] px-[16px] leading-[36px] tracking-[#0.12px] relative z-10 w-full rounded-[5px]" placeholder="Shorten a link here..." />
+              <input type="text" name="url" className={clsx("py-[6px] border-[3px] px-[16px] leading-[36px] tracking-[#0.12px] relative z-10 w-full rounded-[5px]",
+                isInvalid ? "outline-[#F46363] border-[#F46363]" : ""
+              )} placeholder="Shorten a link here..." />
               <SubmitButton />
             </form>
           </div>
