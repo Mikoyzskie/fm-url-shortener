@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className={`${inter.className} pt-10 md:pt-12`}>
         <Header />
         <div className="">
-          <main className="pb-[168px] px-6">
+          <main className="pb-[168px] md:px-0 px-6 flex flex-col md:flex-row-reverse items-center max-w-[1110px] w-full mx-auto md:gap-[101px]">
             <div className="overflow-hidden pb-[37px]">
               <Image
                 src={"/illustration-working.svg"}
@@ -33,14 +33,14 @@ export default function RootLayout({
                 className="relative"
               />
             </div>
-            <div className="flex flex-col gap-[15px]">
-              <h1 className="text-[42px] font-bold text-[#34313D] leading-[48px] text-center">
+            <div className="flex flex-col gap-[15px] text-center md:text-start">
+              <h1 className="text-[42px] font-bold text-[#34313D] leading-[48px] md:text-[80px] md:leading-[90px] md:-tracking-[2px]">
                 More than just shorter links
               </h1>
-              <p className="text-[#9E9AA8] font-medium text-lg leading-[30px] tracking-[0.12px] text-center mb-5">
+              <p className="text-[#9E9AA8] font-medium text-lg leading-[30px] tracking-[0.12px] mb-5 md:text-[22px] md:tracking-[0.15px] md:leading-9">
                 {"Build your brand’s recognition and get detailed insights on how your links are performing."}
               </p>
-              <div className="px-[65px] font-bold text-white">
+              <div className="px-[65px] md:px-0 font-bold text-white md:max-w-[197px]">
                 <Button text="Get Started" />
               </div>
             </div>
