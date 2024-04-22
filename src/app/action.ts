@@ -37,11 +37,10 @@ export async function shorten(prevState: any, formData: FormData) {
 
     const data: IResult = await response.json();
 
-    // console.log(data);
-
     return {
       message: "Success",
       url: data.result_url,
+      input: validateURL.data.url,
     };
   } catch (error) {
     return { message: "error" };
