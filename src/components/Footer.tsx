@@ -50,7 +50,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <footer className='bg-[#232127] text-white px-6 md:px-0 pt-[54px] pb-14'>
+            <footer className='bg-[#232127] text-white px-6 md:px-0 pt-[54px] pb-14 md:pb-[72px]'>
                 <div className='flex flex-col items-center md:flex-row md:items-start max-w-[1112px] mx-auto w-full justify-between'>
                     <Image
                         src={"/footer-logo.svg"}
@@ -60,7 +60,7 @@ export default function Footer() {
                         className='mb-[50px]'
                     />
                     <div className='flex flex-col md:flex-row md:gap-[101px] justify-between items-center md:items-start'>
-                        <div className='grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-[78px] pb-12'>
+                        <div className='grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-[78px] pb-12 md:pb-0'>
                             {
                                 links.map((link: ILinks, index: number) => {
                                     return (
@@ -70,7 +70,7 @@ export default function Footer() {
                                                 {
                                                     link.navs.map((nav, index) => {
                                                         return (
-                                                            <p key={index}>{nav}</p>
+                                                            <p key={index} className='hover:text-[#2BD0D0] hover:cursor-pointer'>{nav}</p>
                                                         )
                                                     })
                                                 }

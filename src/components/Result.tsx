@@ -19,7 +19,7 @@ export default function Result({ item, input }: { item: string, input: string })
                 <button onClick={async () => {
                     await navigator.clipboard.writeText(item);
                     setCopied(true)
-                }} className={clsx("text-lg text-white leading-6 md:text-[15px] font-bold rounded-[5px] relative z-10 w-full py-[10px] h-auto md:px-[31px]",
+                }} className={clsx("text-lg text-white leading-6 md:text-[15px] font-bold rounded-[5px] relative z-10 w-full py-[10px] h-auto md:px-[31px] hover:bg-[#9AE3E3]",
                     copied ? "bg-[#3A3054]" : "bg-[#2BD0D0]"
                 )}>
                     {

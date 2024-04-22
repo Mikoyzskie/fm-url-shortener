@@ -33,13 +33,15 @@ export default function RootLayout({
                 className="relative"
               />
             </div>
-            <div className="flex flex-col gap-[15px] text-center md:text-start">
-              <h1 className="text-[42px] font-bold text-[#34313D] leading-[48px] md:text-[80px] md:leading-[90px] md:-tracking-[2px]">
-                More than just shorter links
-              </h1>
-              <p className="text-[#9E9AA8] font-medium text-lg leading-[30px] tracking-[0.12px] mb-5 md:text-[22px] md:tracking-[0.15px] md:leading-9">
-                {"Build your brand’s recognition and get detailed insights on how your links are performing."}
-              </p>
+            <div className="flex flex-col gap-[15px] md:gap-[38px] text-center md:text-start">
+              <div className="flex flex-col">
+                <h1 className="text-[42px] font-bold text-[#34313D] leading-[48px] md:text-[80px] md:leading-[90px] md:-tracking-[2px]">
+                  More than just shorter links
+                </h1>
+                <p className="text-[#9E9AA8] font-medium text-lg leading-[30px] tracking-[0.12px] mb-5 md:mb-0 md:text-[22px] md:tracking-[0.15px] md:leading-9">
+                  {"Build your brand’s recognition and get detailed insights on how your links are performing."}
+                </p>
+              </div>
               <div className="px-[65px] md:px-0 font-bold text-white md:max-w-[197px]">
                 <Button text="Get Started" />
               </div>
