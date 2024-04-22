@@ -45,9 +45,8 @@ export default function Section() {
                         />
                     </div>
                 </div>
-                <div className='h-2 w-full max-w-[1110px] bg-[#2BD0D0] absolute top-[152px] left-0 z-10'>
-
-                </div>
+                <div className='h-2 w-full bg-[#2BD0D0] absolute top-[152px] left-0 z-10 md:block hidden' />
+                <div className='h-full w-2 bg-[#2BD0D0] absolute top-0 left-1/2 -translate-x-1/2 md:hidden block' />
             </div>
         </>
     )
