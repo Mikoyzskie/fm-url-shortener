@@ -11,7 +11,7 @@ export default function Result({ item, input }: { item: string, input: string })
     return (
         <div className='bg-white rounded-[5px] w-full max-w-[1110px] mx-auto flex flex-col md:flex-row justify-between md:items-center md:py-4 md:px-6'>
             <div className='py-[6px] px-4 md:p-0'>
-                <h3 className='text-[#34313D] font-medium leading-9 tracking-[0.12px]'>{input}</h3>
+                <h3 className='text-[#34313D] font-medium leading-9 tracking-[0.12px] truncate custom-max-chars'>{input}</h3>
             </div>
             <div className='h-[1px] w-full bg-[#9E9AA8] block md:hidden'></div>
             <div className='p-6 pt-[6px] md:p-0 px-4 flex flex-col md:flex-row md:items-center gap-2 md:gap-6'>
@@ -27,7 +27,6 @@ export default function Result({ item, input }: { item: string, input: string })
                     }
                 </button>
             </div>
-
         </div>
     )
 }

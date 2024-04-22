@@ -57,7 +57,7 @@ export default function Home() {
       setIsInvalid(true)
     }
 
-  }, [state, test])
+  }, [state])
 
 
   return (
